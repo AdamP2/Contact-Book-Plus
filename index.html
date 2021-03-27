@@ -1,17 +1,47 @@
 <html>
     <head>
-        <title>Contact App</title>
-        <meta charset="UTF-8">
-        <title></title>
+        <title>Contact App</title><meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="resources\css\bootstrap.min.css">
+        <link rel="stylesheet" href="resources/css/custom.css">
+        <link rel="stylesheet" href="resources/customCss.css">
     </head>
-    <body onload="fetchContacts()">
+    <body  onload="fetchContacts()">
+
+   <!-------------------- Header -------------------->
+   <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="index.html" class="navbar-brand">
+            <!-- Logo Image -->
+            <img src="resources/images/pngkey.com-contacts-icon-png-2026158.png" width="100px" alt="" class="d-inline-block align-middle mr-2">
+            <!-- Logo Text -->
+            <span class="text-uppercase font-weight-bold">Contact Book APP </span>
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbar">
+            <div class="navbar-nav">
+                <a href="index.html" class="nav-item nav-link"> Home</a>
+                <a href="add-contact.html" class="nav-item nav-link">Add Contact</a>
+            </div>
+        </div>
+        
+    </nav>
+</header>
+<!-------------------- Header -------------------->
+        <div class="index-content">
         
         <div id="table">Contacts loading...</div>
-        <button id="refresh" type="button">Refresh</button>
-
-            <button id="addContact" type="button">Add Contact</button>
+        <br>
+        <button class="btn btn-primary"  id="refresh" type="button">Refresh</button>
+        <button class="btn btn-info" id="addContact" type="button">Add Contact</button>
+        </div>
         
+
         <script src="config.js"></script>
+        
         <script>      
         
         
@@ -36,9 +66,10 @@
                 for(a in data){
                     output += `
                         <tr onclick="editContact(${data[a].id})">
-                            <td><img src="${rootPath}controller/uploads/${data[a].avatar}" width="40"/></td>
+                            <td><img src="${rootPath}controller/uploads/${data[a].avatar}" width="75"/></td>
                             <td><h5>${data[a].firstname}</h5></td>
                             <td><h5>${data[a].lastname}</h5></td>
+                            <br>
                         </tr>
                     `
                 }
@@ -55,5 +86,11 @@
             }
             
         </script>
+        <div class="footer">
+            <p>&#169;Phiri Adam</p>
+          </div>
+
+          <script src="resources\js\jquery-3.4.1.min.js"></script>
+          <script src="resources\js\bootstrap.bundle.min.js"></script>
     </body>
 </html>

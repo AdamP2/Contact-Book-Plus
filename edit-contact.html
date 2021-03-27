@@ -2,29 +2,60 @@
     <head>
         <title>Contact App |Edit </title>
         <meta charset="UTF-8">
-        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="resources\css\bootstrap.min.css">
+        <link rel="stylesheet" href="resources/css/custom.css">
+        <link rel="stylesheet" href="resources/customCss.css">
+        
     </head>
     <body onload="getContact()">
+           <!-------------------- Header -------------------->
+   <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">
+            <!-- Logo Image -->
+            <img src="resources/images/pngkey.com-contacts-icon-png-2026158.png" width="100px" alt="" class="d-inline-block align-middle mr-2">
+            <!-- Logo Text -->
+            <span class="text-uppercase font-weight-bold">Contact Book APP </span>
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbar">
+            <div class="navbar-nav">
+                <a href="index.html" class="nav-item nav-link"> Home</a>
+                <a href="add-contact.html" class="nav-item nav-link">Add Contact</a>
+            </div>
+        </div>
+        
+    </nav>
+</header>
+<!-------------------- Header -------------------->
+<div class="content">
         <br/>
         <div id="avatarImage"></div>
         <form id="editForm">
-            <label for="firstname">First name</label>
-            <input type="text" name="firstname" id="firstname" readonly><br/>
-            <label for="lastname">Last name</label>
-            <input type="text" name="lastname" id="lastname" readonly><br/>
-            <label for="mobile">Mobile</label>
-            <input type="text" name="mobile" id="mobile" readonly><br/>
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" readonly><br/>
-            <label for="avatar" id="avatarLabel" hidden>Change profile image</label><br/>
-            <input type="file" name="avatar" id="avatar" hidden><br/>
+            <span class="badge badge-info" for="firstname">First name</span>
+            <input class="form-control" type="text" name="firstname" id="firstname" readonly><br/>
+            <span class="badge badge-info"  for="lastname">Last name</span>
+            <input class="form-control" type="text" name="lastname" id="lastname" readonly><br/>
+            <span class="badge badge-info"  for="mobile">Mobile</span>
+            <input class="form-control" type="text" name="mobile" id="mobile" readonly><br/>
+            <span class="badge badge-info"  for="email">Email</span>
+            <input class="form-control" type="text" name="email" id="email" readonly><br/>
+            <span for="avatar" id="avatarLabel" hidden>Change profile image</span><br/>
+            <input class="btn btn-info" type="file" name="avatar" id="avatar" hidden><br/>
             <br/> 
-            <button type="submit" id="submitForm" hidden>Submit</button>
+            <button class="btn btn-info" type="submit" id="submitForm" hidden>Submit</button>
         </form>
-        <br/><br/>
-        <button id="homeLink" type="button">Home</button>
-        <button id="editContact" type="button">Edit</button>
-        <button id="deleteContact" type="button">Delete</button>
+        <button class="btn btn-primary" id="homeLink" type="button">Home</button>
+        <button class="btn btn-info" id="editContact" type="button">Edit</button>
+        <button class="btn btn-danger" id="deleteContact" type="button">Delete</button>
+        <br>
+        <br>
+        <br>
+</div>
         
         
         <script src="config.js"></script>
@@ -124,5 +155,11 @@
             }
         
         </script>
+                               <div class="footer">
+                                <p>&#169;Phiri Adam</p>
+                              </div>
+                    
+                              <script src="resources\js\jquery-3.4.1.min.js"></script>
+                              <script src="resources\js\bootstrap.bundle.min.js"></script>    </body>
     </body>
 </html>
