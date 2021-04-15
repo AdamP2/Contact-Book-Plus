@@ -28,6 +28,7 @@ body {
 
     padding: 10px;
     height: 250px;
+    padding-bottom: 60rem;
   }
 
   .footer {
@@ -39,4 +40,5 @@ body {
    color: white;
    text-align: center;
    height: 75px;
+   padding-top: 1em;
 }
